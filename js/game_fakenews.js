@@ -2,7 +2,7 @@
 let encerts = 0;
 let vides = 3;
 let t_restant = false;
-let timer = 60;
+let timer = 90;
 let stopTimer = null;
 let currentQuestion = {};
 
@@ -18,7 +18,7 @@ const MAX_ENCERTS = 3;
 function contarTemps(){
 	stopTimer = setInterval(()=>{
 		timer--;
-		mostrarTemps.innerHTML = `00:${timer}`;
+		mostrarTemps.innerHTML = `${timer}`;
 		if(timer===0){
 			clearInterval(stopTimer);
 			return window.location.assign('tips.html')
@@ -63,7 +63,7 @@ function clicar(id){
 		if(encerts==3){ //si el jugador encerta les tres notícies, el joc s'acaba, guanya el joc
 			//print end game
 			clearInterval(stopTimer);
-			mostrarTemps.innerHTML = `Només has tardat ${60 - timer} segons`;
+			mostrarTemps.innerHTML = `Només has tardat ${90 - timer} segons`;
 			//$('#playAgainButton').show(); //s'ha de crear un botó playAgainButton
 			return window.location.assign('end.html') //has guanyat el joc!!
 		}
