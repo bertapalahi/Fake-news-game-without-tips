@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+ 	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>Fake News</title>
+	<style>
+		@font-face{
+			font-family:'font1';
+			src: url(fonts/font1.ttf);
+		}
+
+		@font-face{
+			font-family:'font2';
+			src: url(fonts/font3.ttf);
+		}
+
+		@font-face{
+			font-family:'font3';
+			src: url(fonts/font2.ttf);
+		}
+
+		#myProgress {
+		  width: 100%;
+		  border: none;
+		  border-radius: 5px;
+		  background-color: white;
+		}
+
+		#myBar {
+		  width: 1%;
+		  height: 30px;
+		  background-color: #c3cc22;
+		  border-radius: 5px;
+		}
+
+		#t-restant{
+			font-family: 'font3';
+			font-size: 3rem;
+			width: 160px;
+		  	height: 50px;
+			color: #6581b7;
+			border-radius: 5px;
+			text-align: center;
+			border: none;
+			background-color: white;
+		}		
+
+		#myLifeBar{
+			width: 150px;
+			height: 40px;
+		}
+
+		#tips{
+			font-size: 30px;
+			cursor: pointer;
+			border-radius: 5px;
+			color: whitesmoke;
+			background: #6581b7;
+			font-size: 2.4rem;
+			padding: 1rem 4rem;
+			width: 160px;
+			text-decoration: none;
+			border: none;
+			display: inline;
+		}
+
+		#tips:hover{
+			cursor: pointer;
+			box-shadow: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+			transition: transform 150ms;
+			transform: scale(1.03);
+		}
+
+		#encerts{
+			color: #6581b7;
+		}
+
+		.alert {
+		  padding: 20px;
+		  background-color: whitesmoke; /* Red */
+		  color: #6581b7;
+		  margin-bottom: 15px;
+		}
+
+		/* The close button */
+		.closebtn {
+		  margin-left: 15px;
+		  color: #6581b7;
+		  font-weight: bold;
+		  float: right;
+		  font-size: 22px;
+		  line-height: 20px;
+		  cursor: pointer;
+		  transition: 0.3s;
+		}
+
+		/* When moving the mouse over the close button */
+		.closebtn:hover {
+		  color: whitesmoke;
+		}
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+</head>
+<body bgcolor=whitesmoke text="#aaa" background="src/bck.png">
+	<div class="alert">
+	  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+	  Troba les 3 notícies falses. Tens 3 vides i 60 segons. Si cliques les imatges podràs veure les notícies completes.
+	</div>
+	<main>
+		<section class="section2">
+			<div id="myProgress">
+				<div id="myBar"></div>
+			</div>
+			<h2 id="encerts" class="estadisticas">0/3</h2>
+
+			<img id="myLifeBar" src="src/heart.png">	
+				<h2 id="vides" class="estadisticas"></h2>
+			</img>
+		</section>
+		<section class="section1">
+			<table align="center">
+				<tr>
+					<td>
+						<a href="https://www.vozpopuli.com/bienestar/dieta-nasa-perder-peso.html" target="_blank"> <img src="src/new_1.png"> </a>
+						<div class="imgButton">
+							<button id="1" onclick="clicar('1')"></button>
+						</div>
+					</td>
+					<td>
+						<a href="https://www.mysexystyles.com/products/reduce-unwanted-weight-with-slim-miracle-original" target="_blank"><img src="src/new_2.png"></a>
+						<div class="imgButton">
+							<button id="2" onclick="clicar('2')"></button>
+						</div>
+					<td>
+						<a href="https://www.mediapost.com/publications/article/216818/ftc-cracks-down-on-deceptive-weight-loss-ads.html" target="_blank"> <img src="src/new_3.png"> </a>
+						<div class="imgButton">
+							<button id="3" onclick="clicar('3')"></button>
+						</div>
+					</td>	
+					<td>	
+						<a href="https://www.instagram.com/p/CYHf1dVJcxu/" target="_blank"><img src="src/new_4.png"></a>
+						<div class="imgButton">
+							<button id="4" onclick="clicar('4')"></button>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="https://financenancy.com/lifestyle/weightloss-itziarcastro-es-tab?utm_source=taboola&utm_medium=mediaset-telecinco&utm_campaign=14553188&utm_term=Ahora+Itziar+Castro+es+delgada+y+simplemente+hermosa&utm_content=http%3A%2F%2Fcdn.taboola.com%2Flibtrc%2Fstatic%2Fthumbnails%2Fe468d4c5b49cf4405217584cf7059bb5.jpg&ts=2021-12-11+20%3A52%3A26&tbv=r-uKhVk4uZrwGGviqnk9Lc5Nae_eqAf9WCNQJCtCaJo%3D&br=1" target="_blank"> <img src="src/new_5.png"> </a>
+						<div class="imgButton">
+							<button id="5" onclick="clicar('5')"></button>
+						</div>
+					</td>
+					<td>
+						<a href="https://extraoccasions4younow.com/34/solesties-aven-m/gps/?req-id=xuRWVKGi&utm_source=348" target="_blank"><img src="src/new_6.png"></a>
+						<div class="imgButton">
+							<button id="6" onclick="clicar('6')"></button>
+						</div>
+					<td>
+						<a href="https://www.20minutos.es/salud/nutricion/ayuno-de-agua-que-es-y-por-que-es-peligroso-prolongarlo-4938023/" target="_blank"><img src="src/new_7.png"></a>
+						<div class="imgButton">
+							<button id="7" onclick="clicar('7')"></button>
+						</div>
+					</td>	
+					<td>	
+						<a href="https://www.20minutos.es/noticia/4898145/0/seis-trucos-jennifer-lopez-para-perder-peso-rapidamente/" target="_blank"><img src="src/new_8.png"></a>
+						<div class="imgButton">
+							<button  id="8" onclick="clicar('8')"></button>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+		</section>
+		<section class="section2">
+
+			<h2 id="t-restant" class="estadisticas">00:60</h2>
+		</section>
+	</main>
+	<script src="js/game_fakenews.js"></script>
+</body>
+</html>
