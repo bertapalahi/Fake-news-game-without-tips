@@ -21,7 +21,7 @@ function contarTemps(){
 		mostrarTemps.innerHTML = `${timer}`;
 		if(timer===0){
 			clearInterval(stopTimer);
-			return window.location.assign('tips.html')
+			return window.location.assign('index.html')
 		}
 	}, 1000);
 }
